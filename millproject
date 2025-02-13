@@ -1,0 +1,65 @@
+# this is an example config file for pcb2gcode.
+# place this in the same directory as your gerber files to save typing
+# todo: change these 
+# You may want to uncomment and change those in local project files
+front=OPC478 breakout-F_Cu.gbr
+#back=OPC478 breakout-B_Cu.gbr
+drill=OPC478 breakout.drl
+outline=OPC478 breakout-Edge_Cuts.gbr
+
+output-dir=./pcbgcode
+
+
+# parameters for isolation routing / engraving / etching
+metric=true
+metricoutput=true
+
+#specify custom starting gcode
+#preamble=preamble-code.gcode
+zero-start=true
+
+zwork=-0.1
+zsafe=2.0
+zchange=25.0
+
+mill-feed=20
+mill-speed=15000
+mill-diameters=0.25
+isolation-width=0.3
+
+
+drill-side=front
+cut-side=front
+nog64=true
+#zchange-absolute=true
+nog81=true
+nog91-1=true
+
+
+# drilling parameters
+onedrill=false
+zdrill=-2.0mm
+drill-feed=40mm/minute
+drill-speed=15000
+
+
+# parameters for cutting out boards
+cutter-diameter=2
+zcut=-2.0mm
+cut-feed=8
+#cut-vertfeed   #how fast to cut inward
+cut-speed=15000
+cut-infeed=1.7
+
+
+
+
+bridges=5
+bridgesnum=4
+zbridges=-1.0
+
+# generate voronoi regions
+voronoi=0
+
+#dpi=1000
+#max-deviation=0
